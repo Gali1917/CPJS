@@ -1,35 +1,49 @@
 console.group("Cuadrados");
-const ladoCuadrado = 5;
-console.log("Los lados del cuadrado miden: " + ladoCuadrado + " cm.");
 
-const perimetroCuadrado = ladoCuadrado * 4;
-console.log("El perimetro del cuadrado es: " + perimetroCuadrado + " cm.");
+function perimetroCuadrado(ladoCuadrado){
+    return ladoCuadrado * 4;
+} 
+console.log(perimetroCuadrado());    
 
-const areaCuadrado = ladoCuadrado * ladoCuadrado;
-console.log("El area del cuadrado es: " + areaCuadrado + " cm^2.");
-console.groupEnd();
+function areaCuadrado(ladoCuadrado){
+    return ladoCuadrado * ladoCuadrado;
+}
+areaCuadrado();
+console.log(console.groupEnd());
 
 console.group("Triangulos");
-const ladoTriangulo1 = 6;
-const ladoTriangulo2 = 6;
-const baseTriangulo = 4;
-const alturaTriangulo = 5;
 
-const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
-console.log("El perimetro del triangulo es: " + perimetroTriangulo + " cm.");
 
-const areaTriangulo = baseTriangulo * alturaTriangulo / 2;
-console.log("El area del triangulo es: " + areaTriangulo + " cm^2");
+function perimetroTriangulo(ladoTriangulo1, ladoTriangulo2, baseTriangulo){
+    return ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
+}
+
+console.log(perimetroTriangulo());
+
+function areaTriangulo(baseTriangulo, alturaTriangulo){
+    return baseTriangulo * alturaTriangulo;
+}
+
+console.log(areaTriangulo());
 console.groupEnd();
 
 console.group("Circulos");
-const radioCirculo = 5;
-const diametroCirculo = radioCirculo * 2;
+
+
 const pi = Math.PI;
 
-const perimetroCirculo = diametroCirculo * pi;
-console.log("El perimetro de circulo es: " + perimetroCirculo + "cm.");
+function diametroCirculo(radioCirculo){
+    return radioCirculo * 2;
+}
 
-const areaCirculo = radioCirculo * radioCirculo * pi;
-console.log("El area del circulo es: " + areaCirculo + " cm^2");
+function perimetroCirculo(radio){
+    diametro = diametroCirculo(radio)
+    return diametro * pi;
+}
+console.log(perimetroCirculo());
+
+function areaCirculo(radioCirculo){
+    return radioCirculo * radioCirculo * pi;
+}
+console.log(areaCirculo());
 console.groupEnd();
