@@ -8,6 +8,39 @@
     <script src="./figuras.js"></script>
 </head>
 <body>
-    <h1>Figuras Geometricas</h1>
+    <header>
+        <h1>Figuras geometricas</h1>
+        <p>Este es el primer taller del curso practico de Java Script</p>
+    </header>
+
+    <section>
+        <h2>Calcula el area y perimetro de un cuadrado</h2>
+        <form>
+            <label for="InputCuadrado">
+                Escribe cuanto mide cada lado de tu cuadrado: 
+            </label>
+            <input id="InputCuadrado" type="number">
+            <button type="button" onClick="calcularPerimetroCuadrado()">
+                Calcular el perimetro
+            </button>
+            <button type="button" onClick="calcularAreaCuadrado()">
+                Calcular el area
+            </button>
+        </form>
+    </section>
+
+    <section>
+        <h1>Calcula el area y perimetro de un triangulo</h1>
+        <form action="/">
+
+            <label for="InputLadoTriangulo1">Escribe la medida de un lado del triangulo: </label>
+            <input type="number" id="InputLadoTriangulo1">
+            <label for="InputLadoTriangulo2">Escribe la medida del otro lado del triangulo: </label>
+            <input type="number" id="InputLadoTriangulo2">
+            <label for="InputBaseTriangulo">Escribe la base del triangulo</label>
+            <input type="number" id="InputBaseTriangulo">
+            <button type="button" onClick="calcularPerimetroTriangulo()">Calcular Perimetro</button>
+        </form>
+    </section>
 </body>
 </html>

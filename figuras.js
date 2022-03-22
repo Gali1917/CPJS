@@ -13,7 +13,6 @@ console.log(console.groupEnd());
 
 console.group("Triangulos");
 
-
 function perimetroTriangulo(ladoTriangulo1, ladoTriangulo2, baseTriangulo){
     return ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
 }
@@ -28,7 +27,6 @@ console.log(areaTriangulo());
 console.groupEnd();
 
 console.group("Circulos");
-
 
 const pi = Math.PI;
 
@@ -47,3 +45,36 @@ function areaCirculo(radioCirculo){
 }
 console.log(areaCirculo());
 console.groupEnd();
+
+//conexion HTML
+
+function calcularPerimetroCuadrado(){
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+
+    const perimetro = perimetroCuadrado(value);
+    alert(perimetro);
+}
+
+function calcularAreaCuadrado(){
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+
+    const area = areaCuadrado(value);
+    alert(area);
+
+}
+
+function calcularPerimetroTriangulo(){
+    const inputLado1 = document.getElementById("InputLadoTriangulo1");
+    const inputLado2 = document.getElementById("InputLadoTriangulo2");
+    const inputBase = document.getElementById("InputBaseTriangulo");
+    const valueLado1 = parseFloat(inputLado1.value);
+    const valueLado2 = parseFloat(inputLado2.value);
+    const valueBase = parseFloat(inputBase.value);
+
+    const perimetro = perimetroTriangulo(valueLado1, valueLado2, valueBase);
+
+    alert(perimetro);
+    
+}
