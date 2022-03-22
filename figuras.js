@@ -105,3 +105,26 @@ function calcularAreaCirculo(){
 
     alert(area);
 }
+
+function calcularAlturaTrianguloIsosceles(a, b, c){
+    var base = 0;
+    var lado = 0;
+    if(a == b){
+        base = c;
+        lado = a
+    }
+    else if(a == c){
+        base = b;
+        lado = c;
+    }
+    else if(b == c){
+        base = a;
+        lado = b;
+    }
+    else{
+        alert("No es un triangulo Isosceles");
+    }
+    var h = Math.sqrt((lado * lado) - ((base * base) / 4));
+
+    alert(h);
+}
