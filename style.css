@@ -67,7 +67,9 @@ section input{
     font-weight: bold;
     height: 30px;
 }
-
+form p{
+    margin-top: 12px;
+}
 footer{
     background-color: black;
     height: 20px;
